@@ -1,0 +1,44 @@
+<div class = "container">
+    <h4 style="text-align: center;"> Professional Details </h4>
+    <form [formGroup] = "profDetails.professionalDetailsList">
+        <div *ngFor = "let item of profDetails.profDetailsFormGroup.controls; let i = index;" formArrayName="professional">
+            <h4 style="margin-top: 25px;"> Company {{i+1}} </h4>
+            <div [formGroupName]="i">
+            <div class = "form-group">
+                <input type="text" class = "form-control col-lg-4" placeholder="Company Name" formControlName = "company"/>
+                <div *ngIf= "!getFormControl(i,'company').valid && getFormControl(i,'company').touched" style="text-align: left; color: red;"> Company name is required </div>
+            </div>
+            <div class = "form-group">
+                <input type="text" class = "form-control col-lg-4" placeholder="Designation" formControlName = "designation"/>
+                <div *ngIf= "!getFormControl(i,'designation').valid && getFormControl(i,'designation').touched" style="text-align: left; color: red;"> Designation is required </div>
+            </div>
+            <div class = "form-group">
+                <input type="date" class = "form-control col-lg-4" placeholder="Joined Date" formControlName = "startDate"/>
+                <div *ngIf= "!getFormControl(i,'startDate').valid && getFormControl(i,'startDate').touched" style="text-align: left; color: red;"> Select the Joining date </div>
+            </div>
+            <div class = "form-group">
+                <input type="date" class = "form-control col-lg-4" placeholder="Last Date" formControlName = "endDate"/>
+                <div *ngIf= "!getFormControl(i,'endDate').valid && getFormControl(i,'endDate').touched" style="text-align: left; color: red;"> Select the Relieving date </div>
+            </div>
+            <div class = "form-group">
+                <input type="text" class = "form-control col-lg-4" placeholder="Skills" formControlName = "skills"/>
+                <div *ngIf= "!getFormControl(i,'skills').valid && getFormControl(i,'skills').touched" style="text-align: left; color: red;"> Atleast one skill in required </div>
+            </div>
+            <button (click) = "addNewDetail()" class = "btn btn-primary">
+                Add Experience
+            </button>
+            <button (click) = "removeDetail(i)" class = "btn btn-primary" style="margin-left: 10px;">
+                Remove 
+            </button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <button class = "btn btn-primary" [disabled] = "!professionalDetail.valid" (click) = "goToNextPage()" style="float: right;">
+        Next
+    </button>
+</div>
+
+
+

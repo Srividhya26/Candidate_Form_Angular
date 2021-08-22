@@ -1,0 +1,11 @@
+<div class="container" [formGroup] = "uploadDetails">
+    <h4 style="margin-top: 25px;"> Upload Resume </h4>
+    <div>
+        <input type="file"  formControlName = "uploadFiles">
+    </div>
+</div>
+<div class="container" style="margin-top: 50px;">
+    <button [disabled] = "!uploadDetails.valid" (click) = "submitForm()" style="text-align: center; float : right;" class = "btn btn-primary">
+        Submit
+    </button>
+</div>
