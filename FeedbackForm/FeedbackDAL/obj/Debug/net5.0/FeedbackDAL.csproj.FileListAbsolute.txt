@@ -1,0 +1,15 @@
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\bin\Debug\net5.0\FeedbackDAL.deps.json
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\bin\Debug\net5.0\FeedbackDAL.runtimeconfig.json
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\bin\Debug\net5.0\FeedbackDAL.runtimeconfig.dev.json
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\bin\Debug\net5.0\FeedbackDAL.dll
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\bin\Debug\net5.0\ref\FeedbackDAL.dll
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\bin\Debug\net5.0\FeedbackDAL.pdb
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\obj\Debug\net5.0\FeedbackDAL.csproj.AssemblyReference.cache
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\obj\Debug\net5.0\FeedbackDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\obj\Debug\net5.0\FeedbackDAL.AssemblyInfoInputs.cache
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\obj\Debug\net5.0\FeedbackDAL.AssemblyInfo.cs
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\obj\Debug\net5.0\FeedbackDAL.csproj.CoreCompileInputs.cache
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\obj\Debug\net5.0\FeedbackDAL.dll
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\obj\Debug\net5.0\ref\FeedbackDAL.dll
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\obj\Debug\net5.0\FeedbackDAL.pdb
+C:\Users\srividhyav\source\repos\FeedbackForm\FeedbackDAL\obj\Debug\net5.0\FeedbackDAL.genruntimeconfig.cache
