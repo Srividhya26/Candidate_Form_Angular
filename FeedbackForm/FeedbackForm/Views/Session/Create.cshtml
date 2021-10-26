@@ -9,7 +9,7 @@
 <form method="post" asp-action="Create">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="form-group row">
-        <h3> Add Skill </h3>
+        <h3> Add Session </h3>
     </div>
 
     <div class="row">
@@ -19,26 +19,8 @@
                     <label asp-for="SessionName"></label>
                 </div>
                 <div class="col-6">
-                    <input type="text" asp-for="SessionName" placeholder="Name" />
+                    <input type="text" asp-for="SessionName" placeholder="Session Name" />
                     <span asp-validation-for="SessionName" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-6">
-                    <label asp-for="Duration"></label>
-                </div>
-                <div class="col-6">
-                    <input type="text" asp-for="Duration" placeholder="Designation" />
-                    <span asp-validation-for="Duration" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-6">
-                    <label asp-for="Date"></label>
-                </div>
-                <div class="col-6">
-                    <input type="text" asp-for="Date" placeholder="Hired Date" />
-                    <span asp-validation-for="Date" class="text-danger"></span>
                 </div>
             </div>
             <div class="form-group row">
@@ -56,11 +38,30 @@
                     <label asp-for="SpeakerId"></label>
                 </div>
                 <div class="col-6">
-                    <select asp-for="SpeakerId" asp-items="@ViewBag.speakers" class="form-control">
+                    <select asp-for="SpeakerId" asp-items="@ViewBag.Speakers" class="form-control">
                         <option selected="">--Select--</option>
                     </select>
                 </div>
             </div>
+            <div class="form-group row">
+                <div class="col-6">
+                    <label asp-for="Duration"></label>
+                </div>
+                <div class="col-6">
+                    <input type="text" asp-for="Duration" placeholder="Duration" />
+                    <span asp-validation-for="Duration" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-6">
+                    <label asp-for="Date"></label>
+                </div>
+                <div class="col-6">
+                    <input type="text" asp-for="Date" placeholder="Date" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+            </div>
+
 
             <div class="form-group row">
                 <div class="col-4">

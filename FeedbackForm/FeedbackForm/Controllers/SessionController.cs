@@ -1,6 +1,8 @@
 ﻿using FeedbackBL.Logics;
+using FeedbackDAL.Data;
 using FeedbackDAL.Model;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,25 +12,39 @@ namespace FeedbackFormPL.Controllers
 {
     public class SessionController : Controller
     {
-        public SessionBL _sessionBL;
+        private readonly SessionBL _sessionBL;
+        private readonly FeedbackContext _db;
 
-        public SessionController(SessionBL sessionBL)
+        public SessionController(SessionBL sessionBL, FeedbackContext db)
         {
             this._sessionBL = sessionBL;
+            this._db = db;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            IEnumerable<Session> sessionList = await _sessionBL.GetAllSessions();
+
+            return View(sessionList);
         }
 
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
-            IEnumerable<Users> listConductors = await _sessionBL.GetConductor();
-            IEnumerable<Users> listSpeakers = await _sessionBL.GetSpeaker();
+            //IEnumerable < SelectListItem> listConductors = await _sessionBL.GetConductor();
+            //IEnumerable<SelectListItem> listSpeakers = await _sessionBL.GetSpeaker();
+
+            //ViewBag.conductors = listConductors;
+            //ViewBag.speakers = listSpeakers;
+
+            IEnumerable<SelectListItem> listConductors = _db.Users.Select(x =>
+              new SelectListItem
+              {
+                  Text = x.Name,
+                  Value = x.Id.ToString()
+              });
 
             ViewBag.conductors = listConductors;
-            ViewBag.speakers = listSpeakers;
+            ViewBag.speakers = listConductors;
 
             return View();
         }

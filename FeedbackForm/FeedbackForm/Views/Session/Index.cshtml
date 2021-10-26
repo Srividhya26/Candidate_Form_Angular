@@ -3,9 +3,50 @@
     ViewData["Title"] = "Index";
 }
 
+@model IEnumerable<FeedbackDAL.Model.Session>
+
 <div class="row">
     <div class="col-2">
-        <a asp-controller="Session" asp-action="Create" class="btn btn-primary"> Add Skill </a>
+        <a asp-controller="Session" asp-action="Create" class="btn btn-primary text-center"> Add Session </a>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-striped" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th> S.NO </th>
+                        <th> Session Name </th>
+                        <th> Duration </th>
+                        <th> Date </th>
+                        <th> Conductor </th>
+                        <th> Speaker </th>
+                        <th> Action </th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+
+                    @foreach (var session in Model)
+                    {
+                        <tr>
+                            <td> @session.Id  </td>
+                            <td> @session.SessionName </td>
+                            <td> @session.Duration </td>
+                            <td> @session.Date </td>
+                            <td> @session.ConductorId </td>
+                            <td> @session.SpeakerId </td>
+                            <td>
+                                <a asp-controller="Feedback" asp-action="Index" asp-route-id="@session.Id" class="btn btn-primary"> Feedback </a>
+                            </td>
+                        </tr>
+                       
+                    }
+                </tbody>
+            </table>
+
+
+        </div>
     </div>
 </div>
 
